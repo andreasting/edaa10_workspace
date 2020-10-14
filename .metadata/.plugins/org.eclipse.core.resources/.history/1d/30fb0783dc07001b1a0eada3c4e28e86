@@ -1,0 +1,39 @@
+
+public class Point {
+	private int dx;
+	private int dy;
+	private int x ;
+	private int y;
+	private double distance;
+	public Point(int x, int y){
+		
+	}
+	public int getX() {
+		return x;
+	}
+	public int getY() {
+		return y;
+	}
+	
+	public void move (int dx, int dy) {
+		x += dx;
+		y += dy;
+	}
+	public String toString() {
+		String xcoords = String.valueOf(x);
+		String yCoords = String.valueOf(y);
+		
+	}
+	public double distanceTo(Point p) {
+		return;
+
+}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+		
+	}
+
+
