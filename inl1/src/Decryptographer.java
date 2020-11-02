@@ -6,56 +6,70 @@ public class Decryptographer {
     private char letter;
     private int index;
     private Key key;
-    private String message;
+    private char[] charTable;
+    private int charsAdded;
+    private int keyNumber;
+
 
     public Decryptographer(Key key) {
+
         this.letter = 'a';
         this.index = 0;
         this.key = key;
-        message = "blank";
-        stringBuilder = new StringBuilder();
 
+        stringBuilder = new StringBuilder();
+        charTable = new char[124];
+        keyNumber = 0;
+        charsAdded = 0;
+
+        // Max är 65+25 (90) och max index är 0-99, varav 99+25 = 124
+        for (int i = 0; i < 124; i++) {
+            if (charsAdded > 25) {
+                charsAdded = 0;
+            }
+            charTable[i] = (char) ('A' + charsAdded);
+            charsAdded++;
+
+        }
 
 
     }
 
-     public String decrypt(String text) {
+    public String decrypt(String text) {
+        //Återställer texten i stringbuilder för varje ny text
+        stringBuilder.setLength(0);
 
-        message = "";
-        int messageLength = text.length();
-        int j = 1;
-        for (int i = 0; i < messageLength; i++){
+        keyNumber = 0;
 
-            if(j>4){
-                j = 0;
+        for (int i = 0; i < text.length(); i++) {
+
+            // Om det femte chifferindexet har använts, börja om från chiffer 1 (keynumber 0)
+
+            if (keyNumber > 4) {
+                keyNumber = 0;
             }
 
-                index = key.getNumber(j);
-                letter = text.charAt(i);
-
-                // Hoppar över blanksteg
-                if(letter == 32){
-                    stringBuilder.append(letter);
-                    i++;
-                    letter = text.charAt(i);
+            index = key.getNumber(keyNumber);
+            letter = text.charAt(i);
 
 
-                }
-                letter = (char) (letter - (index%26+1));
-                while(letter<65){
-                    index = index%25;
-                    letter = (char)(65+index);
+
+
+            // hur kan jag göra detta bättre?
+            // uppdaterar inte chiffer-indexet om tecknet är blanksteg
+
+            if (text.charAt(i) != ' ') {
+                letter = charTable[letter - 'A' - index % 26 + 78];
+                keyNumber++;
 
             }
 
 
-                stringBuilder.append(letter);
-                j++;
+            stringBuilder.append(letter);
 
 
-
-            }
-         return stringBuilder.toString();
+        }
+        return stringBuilder.toString();
     }
 
 }

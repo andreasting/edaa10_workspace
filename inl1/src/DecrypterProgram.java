@@ -9,14 +9,15 @@ public class DecrypterProgram {
         Key key = new Key();
         Decryptographer decrypter = new Decryptographer(key);
         TextWindow cryptoWindow = new TextWindow("Krypterade meddelanden");
-        TextView cryptoView = new TextView("Krypterade meddelanden", 10, 100);
+        TextView cryptoView = new TextView("Krypterade meddelanden", 10, 200);
 
         TextWindow decodedWindow = new TextWindow("Avkodade meddelanden");
-        TextView decodedView = new TextView("Avkodade meddelanden", 10, 100);
+        TextView decodedView = new TextView("Avkodade meddelanden", 10, 200);
         TestCase test = new TestCase();
 
         TextWindow myDecodedWindow = new TextWindow("Mina avkodningar");
-        TextView myDecodedView = new TextView("Mina avkodningar", 10, 100);
+        TextView myDecodedView = new TextView("Mina avkodningar", 10, 200);
+
 
 
         cryptoWindow.addView(cryptoView);
@@ -28,6 +29,7 @@ public class DecrypterProgram {
             cryptoWindow.setTitle("Krypterade meddelande " +i);
             cryptoView.displayText(test.getCryptoText(i));
 
+
             decodedWindow.setTitle("Avkodade meddelande " +i);
             decodedView.displayText(test.getClearText(i));
 
@@ -36,8 +38,7 @@ public class DecrypterProgram {
 
 
 
-            cryptoWindow.waitForMouseClick();
-
+            }
 
 
         }
@@ -45,4 +46,4 @@ public class DecrypterProgram {
 
 
     }
-}
+
