@@ -59,7 +59,7 @@ public class Decryptographer {
             // uppdaterar inte chiffer-indexet om tecknet är blanksteg
 
             if (text.charAt(i) != ' ') {
-                letter = charTable[letter - 'A' - index % 26 + 78];
+                letter = charTable[letter - 'A' - index % 26 + 26];
                 keyNumber++;
 
             }
