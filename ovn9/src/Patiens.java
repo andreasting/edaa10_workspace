@@ -39,6 +39,8 @@ public class Patiens {
                 numCard++;
 
 
+
+
                 } while (deck.moreCards() && !badGame);
 
             //Spelet avbryts för två anledningar, antingen har man slut på kort eller så

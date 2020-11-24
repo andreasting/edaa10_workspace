@@ -1,36 +1,73 @@
 public class LifeBoard {
+	private int generation;
+	private boolean[][] board;
+	private int boardCols;
+	private int boardRows;
 
-	/** Skapar en spelplan med rows rader och cols kolonner. Spelplanen är från
-	    början tom, dvs alla rutorna är tomma och generationsnumret är 1. */	
+	/** Skapar en spelplan med rows rader och cols kolonner. Spelplanen ï¿½r frï¿½n
+	    bï¿½rjan tom, dvs alla rutorna ï¿½r tomma och generationsnumret ï¿½r 1. */	
 	public LifeBoard(int rows, int cols) {
+		this.generation = 1;
+		this.board = new boolean[rows][cols];
+		this.boardCols = cols;
+		this.boardRows = rows;
+
+		for(int i = 0; i < boardRows; i++){
+
+			for( int j = 0; j < boardCols; j++) {
+
+				board[i][j] = false;
+
+			}
+		}
+
+
 	}
 
 	/** Ger true om det finns en individ i rutan med index row, col, false annars. 
-	    Om index row, col är utanför spelplanen returneras false */
+	    Om index row, col ï¿½r utanfï¿½r spelplanen returneras false */
 	public boolean get(int row, int col) {
-		return false;
+
+		if(row>=boardRows || col>=boardCols){
+			return false;
+		}
+
+		if(row<0 || col<0){
+			return false;
+		}
+
+		if (!board[row][col]){
+			return false;
+		}
+		return true;
 	}
 
-	/** Lagrar värdet val i rutan med index row, col */
+	/** Lagrar vï¿½rdet val i rutan med index row, col */
 	public void put(int row, int col, boolean val) {
+		board[row][col] = val;
+
 	}
 
-	/** Tar reda på antalet rader */
+	/** Tar reda pï¿½ antalet rader */
 	public int getRows() {
-		return 0;
+		return boardRows;
 	}
 
- 	/** Tar reda på antalet kolonner */
+ 	/** Tar reda pï¿½ antalet kolonner */
 	public int getCols() {
-		return 0;
+		return boardCols;
 	}
 
-	/** Tar reda på aktuellt generationsnummer */
+	/** Tar reda pï¿½ aktuellt generationsnummer */
 	public int getGeneration() {
-		return 0;
+		return generation;
 	}
 
-	/** Ökar generationsnumret med ett */
+	/** ï¿½kar generationsnumret med ett */
 	public void increaseGeneration() {
+
+		generation++;
 	}
+
+
 }
