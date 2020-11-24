@@ -3,34 +3,34 @@ public class Card {
 	public static final int HEARTS = SPADES + 1;
 	public static final int DIAMONDS = SPADES + 2;
 	public static final int CLUBS = SPADES + 3;
-	private int rank;	// valör
-	private int suit;   // färg
+	private int rank;	// valï¿½r
+	private int suit;   // fï¿½rg
 	
-	/** Skapar ett spelkort med färgen suit (SPADES, HEARTS, DIAMONDS, CLUBS) 
-	    och valören rank (1-13) */
+	/** Skapar ett spelkort med fï¿½rgen suit (SPADES, HEARTS, DIAMONDS, CLUBS) 
+	    och valï¿½ren rank (1-13) */
 	public Card(int suit, int rank) {
 		this.suit = suit;
 		this.rank = rank;
 	}
 
-	/** Tar reda på färgen */
+	/** Tar reda pï¿½ fï¿½rgen */
 	public int getSuit() {
 		return suit;
 	}
 
-	/** Tar reda på valören */
+	/** Tar reda pï¿½ valï¿½ren */
 	public int getRank() {
 		return rank;
 	}
 
-	/** Returnerar en läsbar representation av kortet, t ex "spader ess" */
+	/** Returnerar en lï¿½sbar representation av kortet, t ex "spader ess" */
 	public String toString(){
 		String suitString = "";		
 		switch(suit) {
 			case SPADES: suitString = "spader"; break;
-			case HEARTS: suitString = "hjärter"; break;
+			case HEARTS: suitString = "hjÃ¤rter"; break;
 			case DIAMONDS: suitString = "ruter"; break;
-			case CLUBS: suitString = "klöver"; break;
+			case CLUBS: suitString = "klÃ¶ver"; break;
 		}
 		String rankString = "";
 		switch(rank) {

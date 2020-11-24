@@ -1,5 +1,5 @@
 public class TestCardDeck {
- 	/** Program för att testa metoderna i klassen CardDeck */
+ 	/** Program fï¿½r att testa metoderna i klassen CardDeck */
 	public static void main(String[] args) {
 		CardDeck deck = new CardDeck();
 		System.out.println("Oblandad kortlek:");
@@ -10,7 +10,7 @@ public class TestCardDeck {
 		System.out.println();
 		System.out.println();
 		System.out.println("Blandad kortlek:");
-		int[] suitVect = new int[4];   // Antal spader, hjärter etc
+		int[] suitVect = new int[4];   // Antal spader, hjï¿½rter etc
 		int[] rankVect = new int[13];  // Antal 1:or, 2:or etc
 		deck.shuffle();
 		while (deck.moreCards()) {
@@ -21,12 +21,12 @@ public class TestCardDeck {
 		}
 		System.out.println();
 		System.out.println();
-		System.out.print("Antal kort i de olika färgerna: ");
+		System.out.print("Antal kort i de olika fÃ¤rgerna: ");
 		for (int i = 0; i <= 3; i++) {
 			System.out.print(suitVect[i] + " ");
 		}
 		System.out.println();
-		System.out.print("Antal kort i de olika valörerna: ");
+		System.out.print("Antal kort i de olika valÃ¶rerna: ");
 		for (int i = 0; i <= 12; i++) {
 			System.out.print(rankVect[i] + " ");
 		}
