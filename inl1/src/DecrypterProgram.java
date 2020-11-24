@@ -36,6 +36,8 @@ public class DecrypterProgram {
             myDecodedWindow.setTitle("Min avkodning av meddelande " +i);
             myDecodedView.displayText(decrypter.decrypt(test.getCryptoText(i)));
 
+            cryptoWindow.waitForMouseClick();
+
 
 
             }
