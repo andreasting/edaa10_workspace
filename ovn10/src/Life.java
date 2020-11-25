@@ -2,12 +2,14 @@ public class Life {
 
 private LifeBoard board,tempBoard;
 private int boardRows,boardCols,neighbors;
+private boolean fill;
 
 
     public Life(LifeBoard board){
         this.board = board;
         this.boardRows = this.board.getRows();
         this.boardCols = this.board.getCols();
+        fill = false;
         tempBoard = new LifeBoard(boardRows,boardCols);
 
         this.neighbors = 0;
@@ -19,20 +21,26 @@ private int boardRows,boardCols,neighbors;
         this.board.increaseGeneration();
 
 
-        for (int i = 0; i < boardRows; i++) {
+        for (int i = 1; i < boardRows; i++) {
 
-            for (int j = 0; j < boardCols; j++) {
+            for (int j = 1; j < boardCols; j++) {
 
-                neighbors = getNeighbors(this.board, i, j);
+                neighbors = getNeighbors(board, i, j);
+                fill = this.board.get(i,j);
 
-                if (neighbors < 2 || neighbors > 3) {
+                if (neighbors <= 1 || neighbors >= 4) {
                     tempBoard.put(i, j, false);
+
                 }
-                if (neighbors == 3) {
+
+                if (neighbors == 3 ) {
                     tempBoard.put(i, j, true);
                 }
-                else
-                    tempBoard.put(i, j, this.board.get(i, j));
+                if(neighbors == 2 && fill){
+                    tempBoard.put(i,j,fill);
+                }
+
+
 
 
             }
@@ -42,8 +50,8 @@ private int boardRows,boardCols,neighbors;
         for (int i = 0; i < boardRows; i++) {
 
             for (int j = 0; j < boardCols; j++) {
-
-                this.board.put(i, j, tempBoard.get(i, j));
+                fill = tempBoard.get(i, j);
+                this.board.put(i, j, fill);
 
             }
         }
@@ -65,24 +73,28 @@ private int boardRows,boardCols,neighbors;
     }
     private int getNeighbors(LifeBoard board, int row, int col){
 
+        // När for-loopen når rutan vi utgår ifrån, kommer totalneighbors bli noll, dvs
+        // loopen blir alltid minst 0
+
         int totalNeighbors = 0;
 
+        for(int i = (-1); i <=1; i++){
 
-        for(int i = row-1; i <=row+1; i++ ){
+            for(int j =(-1); j <=1; j++){
 
-            for(int j = col-1; j <=col+1; j++){
-
-                if(board.get(i,j)){
+                if(board.get(i+row,j+col)) {
                     totalNeighbors++;
                 }
-
-                if(i == row && j == col){
+                if(board.get(i+row,j+col) && i ==0 && j ==0){
                     totalNeighbors--;
                 }
 
 
+
+                }
             }
-        }
+
+
         return totalNeighbors;
     }
 }

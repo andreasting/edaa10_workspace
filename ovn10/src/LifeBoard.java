@@ -12,14 +12,9 @@ public class LifeBoard {
 		this.boardCols = cols;
 		this.boardRows = rows;
 
-		for(int i = 0; i < boardRows; i++){
+		//initierar brädan
+		clear();
 
-			for( int j = 0; j < boardCols; j++) {
-
-				board[i][j] = false;
-
-			}
-		}
 
 
 	}
@@ -28,7 +23,7 @@ public class LifeBoard {
 	    Om index row, col �r utanf�r spelplanen returneras false */
 	public boolean get(int row, int col) {
 
-		if(row>=boardRows || col>=boardCols){
+		if(row>=this.boardRows || col>=this.boardCols){
 			return false;
 		}
 
@@ -36,7 +31,7 @@ public class LifeBoard {
 			return false;
 		}
 
-		if (!board[row][col]){
+		if (!this.board[row][col]){
 			return false;
 		}
 		return true;
@@ -44,30 +39,41 @@ public class LifeBoard {
 
 	/** Lagrar v�rdet val i rutan med index row, col */
 	public void put(int row, int col, boolean val) {
-		board[row][col] = val;
+		this.board[row][col] = val;
 
 	}
 
 	/** Tar reda p� antalet rader */
 	public int getRows() {
-		return boardRows;
+		return this.boardRows;
 	}
 
  	/** Tar reda p� antalet kolonner */
 	public int getCols() {
-		return boardCols;
+		return this.boardCols;
 	}
 
 	/** Tar reda p� aktuellt generationsnummer */
 	public int getGeneration() {
-		return generation;
+		return this.generation;
 	}
 
 	/** �kar generationsnumret med ett */
 	public void increaseGeneration() {
 
-		generation++;
+		this.generation++;
 	}
+	 void clear(){
 
+		for(int i = 0; i < this.boardRows; i++){
+
+			for( int j = 0; j < this.boardCols; j++) {
+
+				this.board[i][j] = false;
+
+			}
+		}
+
+	}
 
 }

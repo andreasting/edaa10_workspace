@@ -3,7 +3,7 @@ public class LifeController {
     public static void main(String[] args) {
         int choice;
         boolean running = true;
-        LifeBoard board = new LifeBoard(6, 6);
+        LifeBoard board = new LifeBoard(10, 10);
         Life game = new Life(board);
 
         LifeView lifeWindow = new LifeView(board);
@@ -20,7 +20,8 @@ public class LifeController {
             }
             if(choice == 2){
 
-                game.newGeneration();
+                    game.newGeneration();
+
 
             }
             if(choice ==1){
@@ -34,5 +35,18 @@ public class LifeController {
         }
         System.exit(0);
 
+    }
+
+    // Inte min kod, ville bara prova automatisk generering
+    public static void wait(int ms)
+    {
+        try
+        {
+            Thread.sleep(ms);
+        }
+        catch(InterruptedException ex)
+        {
+            Thread.currentThread().interrupt();
+        }
     }
 }
