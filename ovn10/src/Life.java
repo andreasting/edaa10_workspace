@@ -37,7 +37,7 @@ private boolean fill;
                     tempBoard.put(i, j, true);
                 }
                 if(neighbors == 2 && fill){
-                    tempBoard.put(i,j,fill);
+                    tempBoard.put(i,j,true);
                 }
 
 
