@@ -3,7 +3,7 @@ public class LifeController {
     public static void main(String[] args) {
         int choice;
         boolean running = true;
-        LifeBoard board = new LifeBoard(10, 10);
+        LifeBoard board = new LifeBoard(20, 20);
         Life game = new Life(board);
 
         LifeView lifeWindow = new LifeView(board);
@@ -18,9 +18,13 @@ public class LifeController {
             if (choice == 3) {
                 running = false;
             }
+
             if(choice == 2){
+                
+
 
                     game.newGeneration();
+
 
 
             }

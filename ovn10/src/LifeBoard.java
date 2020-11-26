@@ -12,8 +12,6 @@ public class LifeBoard {
 		this.boardCols = cols;
 		this.boardRows = rows;
 
-		//initierar brädan
-		clear();
 
 
 
@@ -31,10 +29,7 @@ public class LifeBoard {
 			return false;
 		}
 
-		if (!this.board[row][col]){
-			return false;
-		}
-		return true;
+		return this.board[row][col];
 	}
 
 	/** Lagrar v�rdet val i rutan med index row, col */
@@ -63,17 +58,7 @@ public class LifeBoard {
 
 		this.generation++;
 	}
-	 void clear(){
 
-		for(int i = 0; i < this.boardRows; i++){
-
-			for( int j = 0; j < this.boardCols; j++) {
-
-				this.board[i][j] = false;
-
-			}
-		}
 
 	}
 
-}
