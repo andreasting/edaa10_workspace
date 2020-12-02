@@ -1,0 +1,38 @@
+
+C
+java:S1659
+"(Declare "quitButton" on a separate line.(ª…ú€şÿÿÿÿ
+b
+java:S2142¯"FEither re-interrupt this method or rethrow the "InterruptedException".(ÚíĞİşÿÿÿÿ
+V
+java:S1161–":Add the "@Override" annotation above this method signature(®î’×üÿÿÿÿ
+V
+java:S1161":Add the "@Override" annotation above this method signature(Ú„ÎÕşÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+E
+java:S2387y"*"x" is the name of a field in "Component".(¡Ê²‘şÿÿÿÿ
+:
+java:S1659y"Declare "y" on a separate line.(¡Ê²‘şÿÿÿÿ
+Q
+java:S1161‰":Add the "@Override" annotation above this method signature(¶øÂÁ
+D	java:S108¯")Either remove or fill this block of code.(ÚíĞİşÿÿÿÿ
+D	java:S108º")Either remove or fill this block of code.(ÚíĞİşÿÿÿÿ
+p
+java:S1450"ZRemove the "lastCommand" field and declare it as a local variable in the relevant methods.(•Şİï
+E
+java:S2387y"*"y" is the name of a field in "Component".(¡Ê²‘şÿÿÿÿ
+G
+java:S1948	",Make "eventQueue" transient or serializable.(‰ı¯øÿÿÿÿ
+<
+java:S1948"'Make "board" transient or serializable.(ÅÁ½/
+=
+java:S1659""Declare "cols" on a separate line.(“µˆßøÿÿÿÿ
+P
+java:S1161s":Add the "@Override" annotation above this method signature(¶øÂÁ
+;
+java:S1659"%Declare "lastCol" on a separate line.(—Ø
+V
+java:S1161¢":Add the "@Override" annotation above this method signature(†§şıÿÿÿÿ
+b
+java:S2142º"FEither re-interrupt this method or rethrow the "InterruptedException".(ÚíĞİşÿÿÿÿ
