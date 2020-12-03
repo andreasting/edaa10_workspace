@@ -1,0 +1,17 @@
+
+<
+java:S1659"!Declare "max" on a separate line.(£ŠÖ¼ýÿÿÿÿ
+0
+java:S1220""Move this file to a named package.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(É°¨ûþÿÿÿÿ
+l
+java:S3457%"Q%n should be used in place of \n to produce the platform-specific line separator.(ñþóŠþÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¬Ö¦“þÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(É°¨ûþÿÿÿÿ
+g
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(ú«Ñø
+S	java:S106."9Replace this use of System.out or System.err by a logger.(¯²¬§ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ñ…æüýÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(ñþóŠþÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ú«Ñø
+S	java:S106"9Replace this use of System.out or System.err by a logger.(õ—àµÿÿÿÿÿ

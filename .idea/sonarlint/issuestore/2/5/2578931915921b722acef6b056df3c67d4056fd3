@@ -1,0 +1,13 @@
+
+j	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰”Â 8²ùÖ¼Ó.
+>
+java:S1659"!Declare "sum" on a separate line.(ÂŒ˜8ù©Ğ¼Ó.
+@
+java:S1659"#Declare "input" on a separate line.(ÂŒ˜8å……½Ó.
+U	java:S106="9Replace this use of System.out or System.err by a logger.(É¶õü8î£•½Ó.
+E
+java:S1659"(Declare "totalCards" on a separate line.(ÂŒ˜8ÊğØ¼Ó.
+Z	java:S106:"9Replace this use of System.out or System.err by a logger.(ùç‘åÿÿÿÿÿ8±Ì”½Ó.
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(İÁå—ùÿÿÿÿ8ß¸½Ó.
+U	java:S106!"9Replace this use of System.out or System.err by a logger.(ŠŒ§ì8Ù ½Ó.
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(şüâ–úÿÿÿÿ8¼€Œ½Ó.

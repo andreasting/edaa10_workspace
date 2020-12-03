@@ -1,0 +1,11 @@
+
+[
+java:S1117"9Rename "stored" which hides the field declared at line 4.(Ôâçòÿÿÿÿÿ8¤Ü°İ.
+V
+java:S1117""9Rename "stored" which hides the field declared at line 4.(ÔŒéÆ8½³º±İ.
+c
+java:S1126*"AReplace this if-then-else statement by a single return statement.(×ßÁÖøÿÿÿÿ8òºé±İ.
+M
+java:S1481"+Remove this unused "stored" local variable.(Ôâçòÿÿÿÿÿ8¤Ü°İ.
+G
+java:S1068"*Remove this unused "stored" private field.(Å®± 8¶üÛ°İ.

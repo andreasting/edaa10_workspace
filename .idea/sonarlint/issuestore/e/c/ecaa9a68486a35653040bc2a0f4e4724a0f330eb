@@ -1,0 +1,14 @@
+
+I
+java:S1068
+"'Remove this unused "t1X" private field.(ÿªÍüÿÿÿÿ8Å‰¸ñØ.
+t
+java:S1450"RRemove the "t2Y" field and declare it as a local variable in the relevant methods.(´¿ëÿÿÿÿÿ8€·ØòØ.
+t
+java:S1450"RRemove the "t1Y" field and declare it as a local variable in the relevant methods.( Íå†øÿÿÿÿ8€·ØòØ.
+R
+java:S22097"5Change this instance-reference to a static reference.(¹Ôø8ÉˆİòØ.
+I
+java:S1068"'Remove this unused "t2X" private field.(ã¼·ƒşÿÿÿÿ8Å‰¸ñØ.
+K
+java:S1068")Remove this unused "track" private field.(†´Ó¢ûÿÿÿÿ8°€èñØ.

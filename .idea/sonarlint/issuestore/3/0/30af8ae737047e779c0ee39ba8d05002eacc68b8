@@ -1,0 +1,8 @@
+
+_
+java:S1854"=Remove this useless assignment to local variable "drawnCard".(‚…ÑÅýÿÿÿÿ8Ë‡Ì´Ý.
+c
+java:S1126;"AReplace this if-then-else statement by a single return statement.(˜õ‘€úÿÿÿÿ8éÐçµÝ.
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ŸÆ°Û8µªØµÝ.
+c
+java:S11260"AReplace this if-then-else statement by a single return statement.(µùü›úÿÿÿÿ8¶ÔäµÝ.
