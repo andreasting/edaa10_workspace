@@ -90,8 +90,19 @@ public class Register {
             tempList.add(reg.get(i).getTitle());
         }
 
-        java.util.Collections.sort(tempList);
+        for(int i = 0; i<tempList.size(); i++){
 
+            for(int j = i+1; j<tempList.size();j++){
+                if(tempList.get(i).compareToIgnoreCase(tempList.get(j))>0){
+                    tempToSort = tempList.get(i);
+                    tempList.set(i,tempList.get(j));
+                    tempList.set(j,tempToSort);
+
+                }
+
+            }
+
+        }
 
 
         // Jämför ArrayList titles med reg, om en exakt match hittas läggs Först titeln sedan författaren till
@@ -107,6 +118,7 @@ public class Register {
                     sb.append(reg.get(j).getAuthor() + "\n" + "\n");
                     j = tempList.size();
                 }
+
 
         }
 
@@ -127,7 +139,19 @@ public class Register {
         for (int i = 0; i<reg.size(); i++){
             tempList.add(reg.get(i).getAuthor());
         }
-        Collections.sort(tempList);
+
+        for(int i = 0; i<tempList.size(); i++) {
+
+            for (int j = i + 1; j < tempList.size(); j++) {
+                if (tempList.get(i).compareToIgnoreCase(tempList.get(j)) > 0) {
+                    tempToSort = tempList.get(i);
+                    tempList.set(i, tempList.get(j));
+                    tempList.set(j, tempToSort);
+
+                }
+
+            }
+        }
 
 
         // Jämför ArrayList titles med reg, om en exakt match hittas läggs Först författaren till sedan titeln
@@ -140,6 +164,8 @@ public class Register {
                     filledIndex.add(j,true);
                     sb.append(reg.get(j).getAuthor() + "\n");
                     sb.append(reg.get(j).getTitle() + "\n" + "\n");
+                    j = tempList.size();    //Undviker identiska utskrifter av samma reg
+
                 }
 
             }
@@ -154,7 +180,7 @@ public class Register {
         linesRead = 0;
 
         try{
-            scan = new Scanner((new File(filename)));
+            scan = new Scanner((new File(filename + ".txt")));
         }catch(FileNotFoundException e){
             return false;
         }
@@ -177,7 +203,7 @@ public class Register {
     // Om filen kan inte sparas skickas den till Main classen där den ger en error
     public Boolean writeToFile(String fileName){
         try{
-            out = new PrintWriter(new File (fileName));
+            out = new PrintWriter(new File (fileName +".txt"));
         }catch(FileNotFoundException e){
             return false;
         }

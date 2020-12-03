@@ -59,11 +59,11 @@ public class BookKeeper {
                     break;
                 case 5:
                     fileName = dialog.readString
-                            ("Enter the filename of the existing book registry (ends in \".txt\"");
+                            ("Enter the filename of the existing book registry to import");
 
                     if(reg.readFromFile(fileName))
                     {
-                        dialog.printString("Book registry succesfully imported from " + fileName + " !");
+                        dialog.printString("Book registry successfully imported from " + fileName + ".txt !");
                     }
                     else{
                         dialog.printString("No such file found!");
@@ -72,12 +72,11 @@ public class BookKeeper {
 
                 case 6:
                     fileName = (dialog.readString
-                            ("Enter the name of the file you want to save your existing books to" +
-                                    " (ends in \" .txt \"" ));
+                            ("Enter the name of the file you want to save your existing books to"));
 
                     if(reg.writeToFile(fileName))
                     {
-                        dialog.printString("Succesfully written to " + fileName + " !");
+                        dialog.printString("Successfully written to " + fileName + ".txt !");
                     }
                     break;
                 case Integer.MAX_VALUE:
