@@ -24,9 +24,12 @@ public class Decryptographer {
 
         // Max är 65+25 (90) och max index är 0-99, varav 99+25 = 124
         for (int i = 0; i < 124; i++) {
+
+
             if (charsAdded > 25) {
                 charsAdded = 0;
             }
+            
             charTable[i] = (char) ('A' + charsAdded);
             charsAdded++;
 
@@ -58,8 +61,8 @@ public class Decryptographer {
             // hur kan jag göra detta bättre?
             // uppdaterar inte chiffer-indexet om tecknet är blanksteg
 
-            if (text.charAt(i) != ' ') {
-                letter = charTable[letter - 'A' - index % 26 + 26];
+            if (text.charAt(i) >=65 && text.charAt(i)<=90) {
+                letter = charTable[letter - 'A' - index % 26 + 78];
                 keyNumber++;
 
             }
