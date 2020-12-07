@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.io.File;
-import java.util.Collections;
 import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.FileNotFoundException;
@@ -185,15 +184,12 @@ public class Register {
             return false;
         }
        while(scan.hasNextLine()){
-           if(linesRead%2 == 0){
+
                authorToAdd =scan.nextLine();
-           }
-           if(linesRead%2 == 1){
                titleToAdd =scan.nextLine();
                addBook(authorToAdd,titleToAdd);
-           }
 
-           linesRead++;
+
        }
        return true;
 

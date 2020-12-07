@@ -13,3 +13,11 @@ G
 ovn10/src/LifeView.java,9\d\9d2224e17d50c29f7ac21b31aef7d8e1a9064ed2
 H
 ovn10/src/LifeBoard.java,f\0\f08d101a4a648544c0c67e746d0d7e000d4716bc
+D
+inl2/src/Dialog.java,1\f\1f8410b5379f62f634d87f2c09b2ac3c77c79520
+B
+inl2/src/Book.java,2\d\2d1c789eb3d521fd2533f06fd26dcaa1e385b403
+H
+inl2/src/BookKeeper.java,a\e\ae66032c1f50e13e4123332a3bb6fcb383c6e332
+F
+inl2/src/Register.java,0\7\079ca40c39c90af1dacfd4fa864cccd20c88f7e4
