@@ -21,3 +21,9 @@ H
 inl2/src/BookKeeper.java,a\e\ae66032c1f50e13e4123332a3bb6fcb383c6e332
 F
 inl2/src/Register.java,0\7\079ca40c39c90af1dacfd4fa864cccd20c88f7e4
+E
+inl3/src/Complex.java,0\a\0aab22caccee329220167715fe307b5243054d45
+H
+inl3/src/Mandelbrot.java,e\1\e14429ca6a5f38527086fc9c0a229b04093e5ef3
+G
+inl3/src/Generator.java,9\f\9f705e332bdd0fcd9331ccb1288a8fc068dd4b1f

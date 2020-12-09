@@ -21,12 +21,15 @@ public class Complex {
     }
 
     public double getIm(){
+
     return this.imZ1;
     }
 
     public double getAbs2(){
+        double abs2 =  Math.pow(reZ1,2) + Math.pow(imZ1,2);
 
-        return Math.pow(Math.abs(reZ1+imZ1),2);
+
+        return abs2;
 
     }
     public void add(Complex c){
